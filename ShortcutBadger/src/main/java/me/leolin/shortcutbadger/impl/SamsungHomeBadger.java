@@ -84,6 +84,7 @@ public class SamsungHomeBadger implements Badger {
             return Collections.emptyList();
         } else {
             return Arrays.asList(
+                    "com.sec.android.app.easylauncher",
                     "com.sec.android.app.launcher",
                     "com.sec.android.app.twlauncher"
             );

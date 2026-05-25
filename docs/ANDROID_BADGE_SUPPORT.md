@@ -11,11 +11,11 @@ These launchers have implementation paths in ShortcutBadger:
 
 | Family | Packages / routing | Notes |
 | --- | --- | --- |
-| Samsung | `com.sec.android.app.launcher`, `com.sec.android.app.twlauncher` | Older Samsung provider path. Newer Samsung versions generally badge from active notifications. |
-| Xiaomi / Redmi / POCO | `com.miui.*`, Xiaomi/Redmi/POCO build fallback | MIUI/HyperOS relies on proprietary notification hooks and user notification settings. |
+| Samsung | `com.sec.android.app.easylauncher`, `com.sec.android.app.launcher`, `com.sec.android.app.twlauncher` | Older Samsung provider path. Newer Samsung versions generally badge from active notifications. |
+| Xiaomi / Redmi / POCO | `com.miui.*`, `com.mi.android.globallauncher`, Xiaomi/Redmi/POCO build fallback | MIUI/HyperOS and POCO Launcher rely on proprietary notification hooks and user notification settings. |
 | OPPO / Realme / OnePlus / OPlus | `com.oppo.launcher`, `com.oplus.launcher`, `com.heytap.launcher`, `net.oneplus.launcher`, OPPO/Realme/OnePlus/OPlus build fallback | Uses the OPPO/ColorOS badge provider path when present. Some modern devices expose only system-managed notification badges. |
 | Vivo / iQOO | `com.vivo.launcher`, `com.bbk.launcher2`, Vivo/iQOO build fallback | Uses Vivo's launcher broadcast path. |
-| Huawei / Honor | `com.huawei.android.launcher`, `com.hihonor.android.launcher`, Huawei/Honor build fallback | Uses Huawei launcher badge provider path. |
+| Huawei / Honor | `com.huawei.android.launcher`, `com.hihonor.android.launcher`, Huawei/Honor build fallback | Uses Huawei and Honor launcher badge provider paths. |
 | Transsion brands | `com.transsion.hilauncher`, `com.transsion.itel.launcher`, TECNO/Infinix/itel/Transsion build fallback | Covers Tecno, Infinix and itel launcher families when their broadcast API is available. |
 | LG, Sony, HTC, ASUS, ZTE, ZUK | Existing launcher packages and manufacturer fallbacks where available | Legacy OEM-specific providers/broadcasts. |
 | Nova, ADW, Apex, KISS, LaunchTime, Yandex, EverythingMe | Existing third-party launcher packages | Depends on those launchers still exposing the historical provider/broadcast. |
@@ -27,6 +27,9 @@ recent OEM launcher versions, apps should use normal notifications. Android show
 notification dots by default on launchers that support them. Numeric counts, when
 available, are a launcher or OEM setting and are not guaranteed to be controlled
 by this library.
+
+Microsoft Launcher also derives badge counts from notification access rather than
+publishing a stable direct badge-count setter for apps to call.
 
 For app teams:
 

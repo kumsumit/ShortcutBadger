@@ -53,9 +53,18 @@ public class XiaomiHomeBadger implements Badger {
                 BroadcastHelper.sendIntentExplicitly(context, localIntent);
             } catch (ShortcutBadgeException ignored) {}
         }
-        if (Build.MANUFACTURER.equalsIgnoreCase("Xiaomi")) {
+        if (matchesBuild("Xiaomi", "Redmi", "POCO")) {
             tryNewMiuiBadge(context, badgeCount);
         }
+    }
+
+    private static boolean matchesBuild(String... values) {
+        for (String value : values) {
+            if (Build.MANUFACTURER.equalsIgnoreCase(value) || Build.BRAND.equalsIgnoreCase(value)) {
+                return true;
+            }
+        }
+        return false;
     }
 
     @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
@@ -95,7 +104,8 @@ public class XiaomiHomeBadger implements Badger {
                 "com.miui.miuihome2",
                 "com.miui.mihome",
                 "com.miui.mihome2",
-                "com.i.miui.launcher"
+                "com.i.miui.launcher",
+                "com.mi.android.globallauncher"
         );
     }
 }

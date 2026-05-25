@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
     <queries>
+        <package android:name="fr.neamar.kiss" />
         <package android:name="com.adw.launcher" />
         <package android:name="com.anddoes.launcher" />
         <package android:name="com.android.launcher3" />
@@ -13,21 +14,34 @@
         <package android:name="com.huawei.android.launcher" />
         <package android:name="com.i.miui.launcher" />
         <package android:name="com.lge.launcher" />
+        <package android:name="com.lge.launcher2" />
+        <package android:name="com.mi.android.globallauncher" />
         <package android:name="com.miui.home" />
+        <package android:name="com.miui.miuilite" />
+        <package android:name="com.miui.miuihome" />
+        <package android:name="com.miui.miuihome2" />
         <package android:name="com.miui.mihome" />
+        <package android:name="com.miui.mihome2" />
         <package android:name="com.oplus.launcher" />
         <package android:name="com.oppo.launcher" />
+        <package android:name="com.quaap.launchtime" />
+        <package android:name="com.quaap.launchtime_official" />
+        <package android:name="com.sec.android.app.easylauncher" />
         <package android:name="com.sec.android.app.launcher" />
         <package android:name="com.sonymobile.home" />
         <package android:name="com.sonyericsson.home" />
         <package android:name="com.teslacoilsw.launcher" />
+        <package android:name="com.transsion.XOSLauncher" />
         <package android:name="com.transsion.hilauncher" />
         <package android:name="com.transsion.itel.launcher" />
         <package android:name="com.vivo.launcher" />
         <package android:name="com.yandex.launcher" />
         <package android:name="com.zte.mifavor.launcher" />
         <package android:name="com.zui.launcher" />
+        <package android:name="me.everything.launcher" />
         <package android:name="net.oneplus.launcher" />
+        <package android:name="org.adw.launcher" />
+        <package android:name="org.adwfreak.launcher" />
 
         <intent>
             <action android:name="android.intent.action.BADGE_COUNT_UPDATE" />
@@ -72,6 +86,9 @@
     <uses-permission android:name="com.huawei.android.launcher.permission.CHANGE_BADGE"/>
     <uses-permission android:name="com.huawei.android.launcher.permission.READ_SETTINGS"/>
     <uses-permission android:name="com.huawei.android.launcher.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="com.hihonor.android.launcher.permission.CHANGE_BADGE"/>
+    <uses-permission android:name="com.hihonor.android.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="com.hihonor.android.launcher.permission.WRITE_SETTINGS"/>
 
     <!--for ZUK-->
     <uses-permission android:name="android.permission.READ_APP_BADGE"/>
