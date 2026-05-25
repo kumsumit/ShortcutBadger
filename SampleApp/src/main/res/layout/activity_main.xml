@@ -12,8 +12,7 @@
     <TextView
         android:id="@+id/textViewHomePackage"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"/>
+        android:layout_height="wrap_content"/>
 
     <EditText
         android:id="@+id/numInput"
@@ -26,32 +25,24 @@
         android:id="@+id/btnSetBadge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
         android:text="Set badge"/>
 
     <Button
         android:id="@+id/btnSetBadgeByNotification"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
         android:text="Launch Notification"/>
 
     <Button
         android:id="@+id/btnRemoveBadge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
         android:text="Remove badge"/>
 
     <Button
         android:id="@+id/btnIsBadgeSupported"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
         android:text="Is badge supported?"/>
 
 

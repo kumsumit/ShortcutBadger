@@ -146,7 +146,7 @@ USAGE
 <br/>2. Add dependencies for ShortcutBadger, it's available from maven now.
         
         dependencies {
-            implementation "me.leolin:ShortcutBadger:1.1.22@aar"
+            implementation("me.leolin:ShortcutBadger:1.1.22@aar")
         }
 
 <br/>3. Add the codes below:
@@ -167,6 +167,10 @@ or
 <br/>
 <br/>
 <br/>
+
+BUILD FROM SOURCE
+===================================
+This project uses Gradle 9.5.1, Android Gradle Plugin 9.2.1, Kotlin DSL build scripts, Java 17 source compatibility, and Android API 37 for the sample app.
 
 
 DEVELOP BY

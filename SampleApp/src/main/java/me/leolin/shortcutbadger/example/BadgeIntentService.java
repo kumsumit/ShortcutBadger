@@ -1,6 +1,6 @@
 package me.leolin.shortcutbadger.example;
 
-import android.annotation.TargetApi;
+import android.annotation.SuppressLint;
 import android.app.IntentService;
 import android.app.Notification;
 import android.app.NotificationChannel;
@@ -59,7 +59,7 @@ public class BadgeIntentService extends IntentService {
         }
     }
 
-    @TargetApi(Build.VERSION_CODES.O)
+    @SuppressLint("NewApi")
     private void setupNotificationChannel() {
         NotificationChannel channel = new NotificationChannel(NOTIFICATION_CHANNEL, "ShortcutBadger Sample",
                 NotificationManager.IMPORTANCE_DEFAULT);

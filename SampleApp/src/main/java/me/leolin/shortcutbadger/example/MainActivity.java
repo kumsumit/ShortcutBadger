@@ -1,9 +1,11 @@
 package me.leolin.shortcutbadger.example;
 
+import android.Manifest;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -45,6 +47,11 @@ public class MainActivity extends Activity {
         launchNotification.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if (!hasNotificationPermission()) {
+                    requestPermissions(new String[]{Manifest.permission.POST_NOTIFICATIONS}, 1001);
+                    return;
+                }
+
                 int badgeCount = 0;
                 try {
                     badgeCount = Integer.parseInt(numInput.getText().toString());
@@ -95,5 +102,8 @@ public class MainActivity extends Activity {
         textViewHomePackage.setText("launcher:" + currentHomePackage);
     }
 
-
+    private boolean hasNotificationPermission() {
+        return Build.VERSION.SDK_INT < Build.VERSION_CODES.TIRAMISU
+            || checkSelfPermission(Manifest.permission.POST_NOTIFICATIONS) == PackageManager.PERMISSION_GRANTED;
+    }
 }

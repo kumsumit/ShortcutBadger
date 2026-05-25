@@ -49,7 +49,7 @@ public class SamsungHomeBadger implements Badger {
                         int id = cursor.getInt(0);
                         ContentValues contentValues = getContentValues(componentName, badgeCount, false);
                         contentResolver.update(mUri, contentValues, "_id=?", new String[]{String.valueOf(id)});
-                        if (entryActivityName.equals(cursor.getString(cursor.getColumnIndex("class")))) {
+                        if (entryActivityName.equals(cursor.getString(1))) {
                             entryActivityExist = true;
                         }
                     }
