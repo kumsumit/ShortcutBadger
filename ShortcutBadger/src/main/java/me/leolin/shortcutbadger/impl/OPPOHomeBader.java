@@ -8,7 +8,7 @@ import android.content.pm.ProviderInfo;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-import java.util.Collections;
+import java.util.Arrays;
 import java.util.List;
 
 import me.leolin.shortcutbadger.Badger;
@@ -47,7 +47,12 @@ public class OPPOHomeBader implements Badger {
 
     @Override
     public List<String> getSupportLaunchers() {
-        return Collections.singletonList("com.oppo.launcher");
+        return Arrays.asList(
+            "com.oppo.launcher",
+            "com.oplus.launcher",
+            "com.heytap.launcher",
+            "net.oneplus.launcher"
+        );
     }
 
     private void executeBadgeByBroadcast(Context context, ComponentName componentName,

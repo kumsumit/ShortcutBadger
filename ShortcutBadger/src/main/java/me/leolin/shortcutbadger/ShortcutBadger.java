@@ -21,11 +21,13 @@ import me.leolin.shortcutbadger.impl.AsusHomeBadger;
 import me.leolin.shortcutbadger.impl.DefaultBadger;
 import me.leolin.shortcutbadger.impl.EverythingMeHomeBadger;
 import me.leolin.shortcutbadger.impl.HuaweiHomeBadger;
+import me.leolin.shortcutbadger.impl.LGHomeBadger;
 import me.leolin.shortcutbadger.impl.NewHtcHomeBadger;
 import me.leolin.shortcutbadger.impl.NovaHomeBadger;
 import me.leolin.shortcutbadger.impl.OPPOHomeBader;
 import me.leolin.shortcutbadger.impl.SamsungHomeBadger;
 import me.leolin.shortcutbadger.impl.SonyHomeBadger;
+import me.leolin.shortcutbadger.impl.XiaomiHomeBadger;
 import me.leolin.shortcutbadger.impl.VivoHomeBadger;
 import me.leolin.shortcutbadger.impl.YandexLauncherBadger;
 import me.leolin.shortcutbadger.impl.ZTEHomeBadger;
@@ -53,6 +55,8 @@ public final class ShortcutBadger {
         BADGERS.add(NewHtcHomeBadger.class);
         BADGERS.add(NovaHomeBadger.class);
         BADGERS.add(SonyHomeBadger.class);
+        BADGERS.add(LGHomeBadger.class);
+        BADGERS.add(XiaomiHomeBadger.class);
         BADGERS.add(AsusHomeBadger.class);
         BADGERS.add(HuaweiHomeBadger.class);
         BADGERS.add(OPPOHomeBader.class);
@@ -232,19 +236,36 @@ public final class ShortcutBadger {
         }
 
         if (sShortcutBadger == null) {
-            if (Build.MANUFACTURER.equalsIgnoreCase("ZUK"))
+            if (matchesBuild("ZUK"))
                 sShortcutBadger = new ZukHomeBadger();
-            else if (Build.MANUFACTURER.equalsIgnoreCase("OPPO"))
+            else if (matchesBuild("OPPO", "OnePlus", "Realme", "OPlus"))
                 sShortcutBadger = new OPPOHomeBader();
-            else if (Build.MANUFACTURER.equalsIgnoreCase("VIVO"))
+            else if (matchesBuild("VIVO", "iQOO"))
                 sShortcutBadger = new VivoHomeBadger();
-            else if (Build.MANUFACTURER.equalsIgnoreCase("ZTE"))
+            else if (matchesBuild("Xiaomi", "Redmi", "POCO"))
+                sShortcutBadger = new XiaomiHomeBadger();
+            else if (matchesBuild("HUAWEI", "HONOR"))
+                sShortcutBadger = new HuaweiHomeBadger();
+            else if (matchesBuild("LG"))
+                sShortcutBadger = new LGHomeBadger();
+            else if (matchesBuild("TECNO", "Infinix", "itel", "Transsion"))
+                sShortcutBadger = new TranssionHomeBadger();
+            else if (matchesBuild("ZTE"))
                 sShortcutBadger = new ZTEHomeBadger();
             else
                 sShortcutBadger = new DefaultBadger();
         }
 
         return true;
+    }
+
+    private static boolean matchesBuild(String... values) {
+        for (String value : values) {
+            if (Build.MANUFACTURER.equalsIgnoreCase(value) || Build.BRAND.equalsIgnoreCase(value)) {
+                return true;
+            }
+        }
+        return false;
     }
 
     /**

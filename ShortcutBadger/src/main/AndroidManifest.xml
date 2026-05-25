@@ -1,6 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <queries>
+        <package android:name="com.adw.launcher" />
+        <package android:name="com.anddoes.launcher" />
+        <package android:name="com.android.launcher3" />
+        <package android:name="com.asus.launcher" />
+        <package android:name="com.bbk.launcher2" />
+        <package android:name="com.heytap.launcher" />
+        <package android:name="com.hihonor.android.launcher" />
+        <package android:name="com.htc.launcher" />
+        <package android:name="com.huawei.android.launcher" />
+        <package android:name="com.i.miui.launcher" />
+        <package android:name="com.lge.launcher" />
+        <package android:name="com.miui.home" />
+        <package android:name="com.miui.mihome" />
+        <package android:name="com.oplus.launcher" />
+        <package android:name="com.oppo.launcher" />
+        <package android:name="com.sec.android.app.launcher" />
+        <package android:name="com.sonymobile.home" />
+        <package android:name="com.sonyericsson.home" />
+        <package android:name="com.teslacoilsw.launcher" />
+        <package android:name="com.transsion.hilauncher" />
+        <package android:name="com.transsion.itel.launcher" />
+        <package android:name="com.vivo.launcher" />
+        <package android:name="com.yandex.launcher" />
+        <package android:name="com.zte.mifavor.launcher" />
+        <package android:name="com.zui.launcher" />
+        <package android:name="net.oneplus.launcher" />
+
+        <intent>
+            <action android:name="android.intent.action.BADGE_COUNT_UPDATE" />
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.APPLICATION_MESSAGE_UPDATE" />
+        </intent>
+        <intent>
+            <action android:name="com.oppo.unsettledevent" />
+        </intent>
+        <intent>
+            <action android:name="launcher.action.CHANGE_APPLICATION_NOTIFICATION_NUM" />
+        </intent>
+    </queries>
+
     <!--for android-->
     <!--<uses-permission android:name="com.android.launcher.permission.READ_SETTINGS"/>-->
     <!--<uses-permission android:name="com.android.launcher.permission.WRITE_SETTINGS"/>-->

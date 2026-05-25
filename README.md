@@ -122,6 +122,9 @@ The ShortcutBadger makes your Android App show the count of unread messages as a
 * Nova launcher with TeslaUnread, Apex launcher, ADW Launcher provided by [notz](https://github.com/notz)
 * Solid launcher provided by [MajeurAndroid](https://github.com/MajeurAndroid)
 * KISS Launcher provided by [alexander255](https://github.com/alexander255)
+* Newer OPPO/Realme/OnePlus/OPlus, Vivo/iQOO, Honor, TECNO/Infinix/itel, Xiaomi/Redmi/POCO routing is best-effort because modern launchers often derive badges from active notifications.
+
+See [Android badge support notes](docs/ANDROID_BADGE_SUPPORT.md) for the current launcher/OEM matrix and Android notification badge guidance.
 
 ## About Xiaomi devices
 Xiaomi devices require extra setup with notifications, please read [wiki](https://github.com/leolin310148/ShortcutBadger/wiki/Xiaomi-Device-Support).
